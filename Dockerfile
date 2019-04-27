@@ -35,7 +35,7 @@ RUN cp /app/target/*-runner /dist/work/application
 RUN chmod 775 /dist/work
 
 
-FROM debian:stretch-20190326-slim
+FROM gcr.io/distroless/base
 
 WORKDIR /work/
 COPY --from=native-image /dist /
