@@ -35,7 +35,7 @@ RUN cp /app/target/*-runner /dist/work/application
 RUN chmod 775 /dist/work
 
 
-FROM gcr.io/distroless/static
+FROM scratch
 
 WORKDIR /work/
 COPY --from=native-image /dist /
