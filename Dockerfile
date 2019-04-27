@@ -35,7 +35,7 @@ RUN cp /app/target/*-runner /dist/work/application
 RUN chmod 775 /dist/work
 
 
-FROM busybox:1.30.1-glibc
+FROM gcr.io/distroless/static
 
 WORKDIR /work/
 COPY --from=native-image /dist /
