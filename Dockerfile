@@ -35,7 +35,7 @@ RUN cp /app/target/*-runner /dist/work/application
 RUN chmod 775 /dist/work
 
 
-FROM debian:stretch-20190326-slim
+FROM frolvlad/alpine-glibc:alpine-3.9_glibc-2.29
 
 WORKDIR /work/
 COPY --from=native-image /dist /
