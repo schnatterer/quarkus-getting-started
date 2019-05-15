@@ -40,4 +40,5 @@ FROM scratch
 WORKDIR /work/
 COPY --from=native-image /dist /
 EXPOSE 8080
+USER 1000
 CMD ["./application", "-Dquarkus.http.host=0.0.0.0"]
